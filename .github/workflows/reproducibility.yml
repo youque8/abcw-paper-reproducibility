@@ -1,0 +1,34 @@
+name: ABCW Reproducibility
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: abcw-reproducibility-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Full clean-environment verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up CPython 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify archived file checksums
+        run: sha256sum -c SHA256SUMS.txt
+
+      - name: Run clean-environment verification
+        run: sh scripts/verify_clean.sh
