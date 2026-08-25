@@ -1,0 +1,15 @@
+# Licensing
+
+This repository uses separate licenses for software and research content.
+
+- Source code in `src/`, `scripts/`, `experiments/`, and `tests/` is licensed
+  under the MIT License. See `LICENSE-CODE`.
+- The paper, figures, documentation, and generated data are licensed under the
+  Creative Commons Attribution 4.0 International License (CC BY 4.0). See
+  `LICENSE-CONTENT`.
+- Files under `archive/` are preserved for provenance. Their original rights
+  and notices, if any, continue to apply; no broader license is granted here
+  where the author did not own the original rights.
+
+When reusing material, cite the accompanying paper and this reproducibility
+archive as described in `CITATION.cff`.

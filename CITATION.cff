@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+title: "ABCW Paper Reproducibility Archive / ABCW論文 再現性アーカイブ"
+message: "If you use this repository, please cite the accompanying paper and this archive. / 本リポジトリを利用する場合は、対応論文と本アーカイブを引用してください。"
+type: software
+version: 0.7.0
+date-released: 2026-08-25

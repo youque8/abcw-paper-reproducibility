@@ -1,0 +1,21 @@
+﻿metric,value,note
+minimum_field_classes,692,第10章で確定した最小field-only分割
+singleton_classes,352,size=1
+nonsingleton_classes,340,複数の異なるΔWを統合
+mean_class_size,3.7023,692クラスの平均
+median_class_size,1,692クラスの中央値
+max_class_size,65,最大クラス
+anchor_future_groups,625,"anchor a=(-,-,-,-,-)"
+anchor_groups_no_internal_collision,575,追加分割不要
+anchor_groups_with_internal_collision,50,追加分割必要
+additional_classes,67,625→692
+chi2_groups,39,内部彩色
+chi3_groups,8,内部彩色
+chi4_groups,2,内部彩色
+chi7_groups,1,内部彩色
+internal_collision_edges,361,50群内部の衝突辺
+non_anchor_witness_actions,30,内部衝突を露出する行動
+sign_flip_pairs,15,aと-aで証人集合が一致
+minimum_witness_action_cover,15,361辺を覆う最小集合被覆
+hamming_min_conflict_example,1,距離1でも衝突例あり
+hamming_max_same_class_example,20,距離20でも同一クラス例あり

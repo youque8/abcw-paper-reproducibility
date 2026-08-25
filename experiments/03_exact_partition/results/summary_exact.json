@@ -1,0 +1,23 @@
+{
+  "transitions": 56536,
+  "distinct_fields": 2562,
+  "distinct_aW": 11202,
+  "field_only_classes_constructed": 692,
+  "lower_bound_classes": 692,
+  "upper_bound_classes": 692,
+  "field_compression_constructed": 0.7298985167837626,
+  "observation_states_after": 8084,
+  "observation_state_compression": 0.2783431530083914,
+  "nondeterministic_groups_after": 0,
+  "max_class_size": 65,
+  "singleton_classes": 352,
+  "merged_classes": 340,
+  "exact_minimum_classes": 692,
+  "minimum_proved": true,
+  "proof_anchor_action": "-----",
+  "anchor_distinct_future_groups": 625,
+  "anchor_group_chromatic_sum": 692,
+  "exact_field_compression": 0.7298985167837626,
+  "exact_observation_states_after": 8084,
+  "exact_observation_state_compression": 0.2783431530083914
+}
