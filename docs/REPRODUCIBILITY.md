@@ -1,6 +1,14 @@
 # Reproducibility Guide / 再現手順
 
 ## English
+### Automated GitHub verification
+
+`.github/workflows/reproducibility.yml` runs the full clean-environment audit
+on every push and pull request. It can also be launched with **Run workflow**
+from the repository's GitHub Actions tab. The job has read-only repository
+permissions, verifies `SHA256SUMS.txt`, selects CPython 3.12, and runs
+`sh scripts/verify_clean.sh` on a fresh Ubuntu runner.
+
 ### Full one-command audit
 On macOS or Linux, create a disposable clean environment and run the complete
 audit with one command:
@@ -35,7 +43,7 @@ their complete result rows with the archived reference table.
 The expected final status is `PASS FULL VERIFICATION`.
 
 ### Level A — regenerate from the ABCW rules
-Run `python experiments/01_dataset/generate_transitions.py`. Expected output: 56,536 transitions, 2,562 distinct fields, 11,202 distinct `(a, field)` states. The implementation uses five agents, learning rate `eta=1`, baseline off-diagonal weight 1, and the Hub/Local/Hub+Local edge sets specified in paper v0.4.
+Run `python experiments/01_dataset/generate_transitions.py`. Expected output: 56,536 transitions, 2,562 distinct fields, 11,202 distinct `(a, field)` states. The implementation uses five agents, learning rate `eta=1`, baseline off-diagonal weight 1, and the Hub/Local/Hub+Local edge sets specified in paper v1.1.
 
 Run `python experiments/03_exact_partition/build_conflict_data.py` to independently rebuild the field-action response table and incompatibility matrix from the same rules.
 
@@ -46,6 +54,10 @@ Run `python experiments/03_exact_partition/build_conflict_data.py` to independen
 The 511-feature tables and partition-structure tables are retained as published experiment outputs and are covered by regression checks. Historical scripts are kept under `archive/original_scripts/` when available.
 
 ## 日本語
+### GitHub上の自動検証
+
+`.github/workflows/reproducibility.yml`は、pushおよびPull Requestのたびにclean environment完全監査を実行します。GitHubリポジトリのActions画面にある**Run workflow**から手動実行することもできます。ジョブのリポジトリ権限は読み取り専用で、`SHA256SUMS.txt`の検査、CPython 3.12の設定、および新規Ubuntu runner上での`sh scripts/verify_clean.sh`を実行します。
+
 ### ワンコマンド完全監査
 macOSまたはLinuxでは、次の一コマンドで一時的なclean environmentを作成し、完全監査を実行できます。
 
@@ -69,7 +81,7 @@ python scripts/verify_full.py
 最終行の期待値は `PASS FULL VERIFICATION` です。
 
 ### Level A — ABCW更新則から再生成
-`python experiments/01_dataset/generate_transitions.py` を実行します。期待値は56,536遷移、2,562種類の場、11,202種類の `(a, field)` 状態です。5主体、学習率 `eta=1`、baselineの非対角重み1、および論文v0.4に明記したHub/Local/Hub+Localの強化辺を用います。
+`python experiments/01_dataset/generate_transitions.py` を実行します。期待値は56,536遷移、2,562種類の場、11,202種類の `(a, field)` 状態です。5主体、学習率 `eta=1`、baselineの非対角重み1、および論文v1.1に明記したHub/Local/Hub+Localの強化辺を用います。
 
 `python experiments/03_exact_partition/build_conflict_data.py` は同じ更新則からfield-action応答表とincompatibility matrixを独立に再構築します。
 

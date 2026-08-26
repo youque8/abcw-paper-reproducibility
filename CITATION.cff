@@ -1,6 +1,10 @@
 cff-version: 1.2.0
-title: "ABCW Paper Reproducibility Archive / ABCW論文 再現性アーカイブ"
+title: "Reproducibility Archive for Exact Minimum Field Partition for One-Step Prediction in a Finite Five-Agent ABCW Model"
 message: "If you use this repository, please cite the accompanying paper and this archive. / 本リポジトリを利用する場合は、対応論文と本アーカイブを引用してください。"
 type: software
-version: 0.7.0
-date-released: 2026-08-25
+authors:
+  - family-names: Shizusawa
+    given-names: Takashi Inoue
+version: 1.1.0
+date-released: 2026-08-26
+repository-code: "https://github.com/youque8/abcw-paper-reproducibility"

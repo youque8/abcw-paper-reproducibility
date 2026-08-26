@@ -1,6 +1,6 @@
 [project]
 name = "abcw-paper-reproducibility"
-version = "0.7.0"
+version = "1.1.0"
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26", "pandas>=2.1", "networkx>=3.2"]
 
