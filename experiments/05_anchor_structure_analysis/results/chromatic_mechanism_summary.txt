@@ -1,0 +1,11 @@
+difficult groups: 50
+groups with chi = clique number: 50/50
+chi/omega distribution:
+omega   2  3  4  7
+chi               
+2      39  0  0  0
+3       0  8  0  0
+4       0  0  2  0
+7       0  0  0  1
+bipartite chi=2 groups: 39/39
+chi>=3 groups containing triangle: 11/11

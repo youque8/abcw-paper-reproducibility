@@ -1,0 +1,3 @@
+co-observed within-anchor pairs checked: 10094
+mismatches: 0
+PASS winner-row conflict criterion
