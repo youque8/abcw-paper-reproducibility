@@ -1,7 +1,7 @@
 # ABCW Paper Reproducibility Archive / ABCW論文 再現性アーカイブ
 
 ## English
-This repository is version **1.1.0** of the reproducibility package for **Exact Minimum Field Partition for One-Step Prediction in a Finite Five-Agent ABCW Model** by Takashi Inoue Shizusawa. It is organized so that the folder can be published on GitHub as-is. The core numerical chain can be regenerated from code: four initial fields × 1,024 action/strategy initial conditions produce **56,536 transitions**, **2,562 distinct current fields**, and **11,202 distinct `(action, field)` states**. The exact predictive-partition result is **692 field classes**.
+This repository is version **1.2.0** of the reproducibility package for **Exact Minimum Field Partition for One-Step Prediction in a Finite Five-Agent ABCW Model** by Takashi Inoue Shizusawa. It is organized so that the folder can be published on GitHub as-is. The core numerical chain can be regenerated from code: four initial fields × 1,024 action/strategy initial conditions produce **56,536 transitions**, **2,562 distinct current fields**, and **11,202 distinct `(action, field)` states**. The exact predictive-partition result is **692 field classes**. Release 1.2.0 additionally archives and verifies the revised manuscript's structural explanation: **10,094** co-observed within-anchor field-pair/action comparisons satisfy the winner-row conflict criterion with zero mismatches, and all **50** nontrivial anchor graphs have matching clique and chromatic numbers (39 with 2, 8 with 3, 2 with 4, and 1 with 7).
 
 The archive distinguishes three levels of evidence: **recomputed from model code**, **recomputed from stored conflict data**, and **archived result tables checked by regression tests**. This distinction is intentional; no unavailable source file has been silently reconstructed and presented as an original artifact.
 
@@ -41,7 +41,7 @@ PASS FULL VERIFICATION
 ```
 
 `requirements-lock.txt` records the exact CPython 3.12.13 verification
-environment used for release 1.1.0. `requirements.txt` and `pyproject.toml`
+environment used for release 1.2.0. `requirements.txt` and `pyproject.toml`
 retain broader lower bounds for development.
 
 ### GitHub Actions
@@ -73,7 +73,8 @@ abcw-paper-reproducibility/
 │   ├── 01_dataset/           # regenerate the 56,536 transitions
 │   ├── 02_natural_features/  # 511 natural-feature candidates + archived results
 │   ├── 03_exact_partition/   # incompatibility graph, 692 coloring/lower-bound certificate
-│   └── 04_partition_structure/ # archived internal-structure checks
+│   ├── 04_partition_structure/ # archived internal-structure checks
+│   └── 05_anchor_structure_analysis/ # winner-row + clique-certificate analyses
 ├── data/processed/           # generated transition table (created by script)
 ├── docs/                     # bilingual reproducibility documentation
 ├── scripts/verify_all.py
@@ -82,7 +83,7 @@ abcw-paper-reproducibility/
 ```
 
 ## 日本語
-このリポジトリは Takashi Inoue Shizusawaによる論文 **Exact Minimum Field Partition for One-Step Prediction in a Finite Five-Agent ABCW Model** に対応する再現性パッケージ **v1.1.0** です。フォルダをそのままGitHubへ公開できる構造にしています。主要な数値連鎖はコードから再生成できます。4種類の初期場 × 1,024の行動・戦略初期条件から、**56,536遷移**、**2,562種類の現在場**、**11,202種類の `(行動, 場)` 状態**が得られ、完全な一時刻先場予測を保つ最小field partitionは **692クラス**です。
+このリポジトリは Takashi Inoue Shizusawaによる論文 **Exact Minimum Field Partition for One-Step Prediction in a Finite Five-Agent ABCW Model** に対応する再現性パッケージ **v1.2.0** です。フォルダをそのままGitHubへ公開できる構造にしています。主要な数値連鎖はコードから再生成できます。4種類の初期場 × 1,024の行動・戦略初期条件から、**56,536遷移**、**2,562種類の現在場**、**11,202種類の `(行動, 場)` 状態**が得られ、完全な一時刻先場予測を保つ最小field partitionは **692クラス**です。 v1.2.0では改訂稿の構造解析も追加し、anchor群内のco-observed field-pair/action **10,094**件でwinner-row criterionの不一致が0件であること、および非自明なanchor graph **50群すべて**でclique numberとchromatic numberが一致すること（2色39群、3色8群、4色2群、7色1群）を検証します。
 
 本アーカイブでは証拠を、**モデルコードから再計算するもの**、**保存済みconflict dataから再計算するもの**、**保存済み結果表を回帰テストで検証するもの**の3段階に分けています。入手できなかった過去のソースを、元ファイルであるかのように黙って再構成することはしていません。
 

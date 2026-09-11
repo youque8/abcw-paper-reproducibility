@@ -8,3 +8,7 @@
 - **692-class constructive upper bound and exact lower bound** — `experiments/03_exact_partition/`; certificate in `results/summary_exact.json` and `anchor_group_chromatic.csv`. / 692クラスの上界構成と厳密下界。
 - **352 singleton / 340 multi-field classes; maximum size 65** — `summary_exact.json` and partition-structure archived outputs. / 692分割の内部構造。
 - **Main paper figures** — `paper/figures/`. / 論文掲載図。
+
+- **Winner-row conflict criterion: 10,094 co-observed within-anchor field-pair/action comparisons, 0 mismatches** — `experiments/05_anchor_structure_analysis/verify_anchor_structure.py`; the count is the sum, over unordered pairs within each anchor fiber, of the number of actions observed for both fields. / winner-row criterion の実装独立チェック。
+- **All 50 difficult anchor graphs satisfy `omega = chi`; distribution 39/8/2/1 for chi=2/3/4/7** — `experiments/05_anchor_structure_analysis/verify_anchor_structure.py`; archived witnesses in `results/chromatic_clique_summary.csv`, `maximum_clique_vertices.csv`, and `maximum_clique_pair_witnesses.csv`. This is an instance-specific certificate, not a general perfect-graph claim. / 50非自明anchor群のclique/coloring証明書。
+- **Complex Systems submission candidate v0.5.1** — `paper/complex_systems_v0.5.1/`; included for traceability of the claims targeted by release 1.2.0. / v1.2.0が対応する改訂稿候補。

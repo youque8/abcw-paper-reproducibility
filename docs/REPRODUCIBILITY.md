@@ -38,7 +38,7 @@ incompatibility graph; checks the stored 692-coloring against every conflict edg
 directly verifies that every observed `(action, color)` has a unique next field;
 re-solves all 625 anchor groups and compares their exact chromatic numbers with the
 archived certificate; and recomputes all 511 natural-feature candidates and compares
-their complete result rows with the archived reference table.
+their complete result rows with the archived reference table; checks all 10,094 co-observed within-anchor field-pair/action comparisons against the winner-row criterion; and verifies matching clique/chromatic certificates for all 50 difficult anchor graphs.
 
 The expected final status is `PASS FULL VERIFICATION`.
 
@@ -77,6 +77,8 @@ python scripts/verify_full.py
 ```
 
 このコマンドは保存済みsummaryの数値を信用するだけでなく、証拠連鎖全体を再計算します。56,536遷移の再生成、2,562頂点のincompatibility graph再構築、全conflict edgeに対する692彩色の検査、すべての観測された `(action, color)` から次場が一意に決まることの直接検査、625 anchor groupの厳密再求解と保存証明書との照合、および511自然特徴候補の全再計算と保存表との照合を行います。
+
+さらに、10,094件のwinner-row criterion照合（不一致0件）と、50個の非自明anchor graphすべてについて clique number = chromatic number であることを検証します。
 
 最終行の期待値は `PASS FULL VERIFICATION` です。
 
