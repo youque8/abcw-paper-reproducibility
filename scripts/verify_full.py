@@ -127,9 +127,12 @@ def main() -> None:
     run("experiments/02_natural_features/run_511_features.py")
     verify_natural_features()
 
+    run("experiments/05_anchor_structure_analysis/verify_anchor_structure.py")
+
     print("\nPASS FULL VERIFICATION")
     print("Regenerated dataset -> rebuilt conflict graph -> verified 692-color upper bound")
-    print("-> re-solved 625 anchor groups -> recomputed all 511 natural-feature candidates.")
+    print("-> re-solved 625 anchor groups -> recomputed all 511 natural-feature candidates")
+    print("-> verified 10,094 winner-row comparisons and clique certificates for all 50 difficult groups.")
 
 
 if __name__ == "__main__":
